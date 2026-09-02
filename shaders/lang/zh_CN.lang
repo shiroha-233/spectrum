@@ -1,0 +1,581 @@
+##--## Spectrum 简体中文语言包 / Simplified Chinese (zh_CN) ##------##
+
+# 本文件为 shaders/lang/zh_CN.lang：供游戏语言为简体中文时显示。
+# 排版结构、分节与条目顺序与 en_US.lang 完全一致（逐行镜像，便于 diff 对照）。
+# 每条翻译上方以 "# EN:" 注释保留对应的英文原文，便于逐条对照审校。
+# 单位类前后缀（ƒ/、1/、s、m、%、° 等）不属语言文本，按原文保留。
+# 文件末尾“补充键”为设置界面实际引用、但上游 en_US.lang 缺失的条目：
+#   即使切换英文界面，这些选项原本也只显示原始标识符；本文件一并补齐中文。
+# 若游戏中语言不是简体中文，可把本文件复制为 en_US.lang 覆盖使用。
+
+##--## Option screens ##------------------------------------------------------##
+
+# EN: screen.ao=Ambient Occlusion
+screen.ao=环境光遮蔽
+# EN: screen.camera=Camera
+screen.camera=相机
+# EN: screen.clouds2d=2D Clouds
+screen.clouds2d=2D 云
+# EN: screen.clouds3d=3D Clouds
+screen.clouds3d=3D 云
+# EN: screen.fogAir=Air Fog
+screen.fogAir=空气雾
+# EN: screen.fogWater=Water Fog
+screen.fogWater=水下雾
+# EN: screen.lighting=Lighting
+screen.lighting=光照
+# EN: screen.parallax=Parallax
+screen.parallax=视差
+# EN: screen.shadowMap=Shadow Map
+screen.shadowMap=阴影贴图
+# EN: screen.ssr=Screen-Space Reflections
+screen.ssr=屏幕空间反射
+# EN: screen.taa=Temporal Anti-Aliasing
+screen.taa=时间性抗锯齿
+# EN: screen.tonemap=Tonemapping
+screen.tonemap=色调映射
+# EN: screen.waterWaves=Water Waves
+screen.waterWaves=水面波浪
+# EN: screen.waterCaustics=Water Caustics
+screen.waterCaustics=水焦散
+# EN: screen.misc=Miscellaneous
+screen.misc=杂项
+# EN: screen.misc.comment=Various options that didn't fit anywhere else.
+screen.misc.comment=一些无法归入其他分类的选项。
+
+##--## Lighting ##-----------------------------------------------------------##
+
+# EN: option.BLOCK_LIGHT_LUMINANCE=Block Light Luminance
+option.BLOCK_LIGHT_LUMINANCE=方块光亮度
+# EN: option.BLOCK_LIGHT_SIZE=Block Light Size
+option.BLOCK_LIGHT_SIZE=方块光尺寸
+# EN: option.BLOCK_LIGHT_TEMPERATURE=Block Light Temperature
+option.BLOCK_LIGHT_TEMPERATURE=方块光色温
+# EN: option.BLOCK_LIGHT_DIRECTIONAL=Directional Block Light
+option.BLOCK_LIGHT_DIRECTIONAL=定向方块光
+# EN: option.BLOCK_LIGHT_USE_AO=Use AO on blocklight
+option.BLOCK_LIGHT_USE_AO=对方块光启用环境光遮蔽
+
+##--## Ambient Occlusion ##---------------------------------------------------##
+
+# EN: option.GLOBAL_LIGHT_USE_AO=Use AO on sunlight
+option.GLOBAL_LIGHT_USE_AO=对日光启用环境光遮蔽
+
+# EN: option.HBAO=Horizon-Based AO
+option.HBAO=地平线环境光遮蔽
+# EN: option.HBAO_RADIUS=HBAO Radius
+option.HBAO_RADIUS=HBAO 半径
+# EN: option.HBAO_DIRECTIONS=HBAO Directions
+option.HBAO_DIRECTIONS=HBAO 方向数
+# EN: option.HBAO_ANGLE_SAMPLES=HBAO Angle Samples
+option.HBAO_ANGLE_SAMPLES=HBAO 角度采样数
+
+##--## Camera ##--------------------------------------------------------------##
+
+# EN: option.CAMERA_AUTOEXPOSURE=Autoexposure Mode
+option.CAMERA_AUTOEXPOSURE=自动曝光模式
+# EN: value.CAMERA_AUTOEXPOSURE.CAMERA_AUTOEXPOSURE_OFF=Off
+value.CAMERA_AUTOEXPOSURE.CAMERA_AUTOEXPOSURE_OFF=关
+# EN: value.CAMERA_AUTOEXPOSURE.CAMERA_AUTOEXPOSURE_SIMPLE=Simple
+value.CAMERA_AUTOEXPOSURE.CAMERA_AUTOEXPOSURE_SIMPLE=简易
+# EN: value.CAMERA_AUTOEXPOSURE.CAMERA_AUTOEXPOSURE_HISTOGRAM=Histogram
+value.CAMERA_AUTOEXPOSURE.CAMERA_AUTOEXPOSURE_HISTOGRAM=直方图
+# EN: option.CAMERA_AUTOEXPOSURE_BIAS=Autoexposure Bias
+option.CAMERA_AUTOEXPOSURE_BIAS=自动曝光偏移
+# EN: option.CAMERA_FOCUS=Focus
+option.CAMERA_FOCUS=对焦距离
+# EN: value.CAMERA_FOCUS.-1=Automatic
+value.CAMERA_FOCUS.-1=自动
+# EN: screen.dof=Depth of Field
+screen.dof=景深
+
+# EN: option.CAMERA_FSTOP=F-Stop
+option.CAMERA_FSTOP=光圈
+# EN: prefix.CAMERA_FSTOP=ƒ/
+prefix.CAMERA_FSTOP=ƒ/
+# EN: option.CAMERA_ISO=ISO
+option.CAMERA_ISO=感光度
+# EN: option.CAMERA_SHUTTER_SPEED=Shutter Speed
+option.CAMERA_SHUTTER_SPEED=快门速度
+# EN: prefix.CAMERA_SHUTTER_SPEED=1/
+prefix.CAMERA_SHUTTER_SPEED=1/
+# EN: suffix.CAMERA_SHUTTER_SPEED=s
+suffix.CAMERA_SHUTTER_SPEED=s
+# EN: screen.motionBlur=Motion Blur
+screen.motionBlur=动态模糊
+
+# EN: option.CAMERA_IRIS_BLADE_COUNT=Iris Blades
+option.CAMERA_IRIS_BLADE_COUNT=光圈叶片数
+# EN: option.CAMERA_IRIS_BLADE_ROTATION=Blade Rotation
+option.CAMERA_IRIS_BLADE_ROTATION=叶片旋转
+# EN: option.CAMERA_IRIS_BLADE_ROUNDING=Blade Rounding
+option.CAMERA_IRIS_BLADE_ROUNDING=叶片圆润度
+
+# EN: option.CAMERA_ANAMORPHIC_SCALE=Anamorphic Scale
+option.CAMERA_ANAMORPHIC_SCALE=变形宽银幕比例
+# EN: option.CAMERA_ANAMORPHIC_SCALE.comment=Typical anamorphic lenses are 2:1. Normal lenses are 1:1.
+option.CAMERA_ANAMORPHIC_SCALE.comment=典型的变形宽银幕镜头为 2:1，普通镜头为 1:1。
+# EN: suffix.CAMERA_ANAMORPHIC_SCALE=:1
+suffix.CAMERA_ANAMORPHIC_SCALE=:1
+
+# EN: option.CAMERA_LENS_DISTORTION=Lens Distortion
+option.CAMERA_LENS_DISTORTION=镜头畸变
+# EN: option.CAMERA_CHROMATIC_ABBERATION=Chromatic Abberation
+option.CAMERA_CHROMATIC_ABBERATION=色差
+
+##--## Depth of Field
+
+# EN: option.DOF=Depth of Field
+option.DOF=景深
+# EN: option.DOF_SIMPLE=Simple Dof
+option.DOF_SIMPLE=简单景深
+# EN: option.DOF_SAMPLES=Samples
+option.DOF_SAMPLES=采样数
+# EN: option.DOF_SAMPLES.COMMENT=Does not affect "simple" Dof.
+option.DOF_SAMPLES.COMMENT=对“简单景深”没有影响。
+
+##--## Motion Blur
+
+# EN: option.MOTION_BLUR=Motion Blur
+option.MOTION_BLUR=动态模糊
+# EN: option.MOTION_BLUR_SAMPLES=Samples
+option.MOTION_BLUR_SAMPLES=采样数
+
+##--## 2D Clouds ##-----------------------------------------------------------##
+
+# EN: option.CLOUDS2D=2D Clouds
+option.CLOUDS2D=2D 云
+# EN: option.CLOUDS2D_SELFSHADOW_QUALITY=Self-Shadowing Quality
+option.CLOUDS2D_SELFSHADOW_QUALITY=自阴影质量
+# EN: option.CLOUDS2D_USE_WORLD_TIME=Use World Time
+option.CLOUDS2D_USE_WORLD_TIME=使用世界时间
+# EN: option.CLOUDS2D_COVERAGE=Coverage
+option.CLOUDS2D_COVERAGE=云量
+
+##--## 3D Clouds ##-----------------------------------------------------------##
+
+# EN: option.CLOUDS3D=3D Clouds
+option.CLOUDS3D=3D 云
+# EN: option.CLOUDS3D_DETAIL_NOISE_OCTAVES=Detail Noise Octaves
+option.CLOUDS3D_DETAIL_NOISE_OCTAVES=细节噪声倍频程
+# EN: option.CLOUDS3D_STEPS_VIEW=Visibility Steps
+option.CLOUDS3D_STEPS_VIEW=可见性步数
+# EN: option.CLOUDS3D_STEPS_SUN=Sunlight Steps
+option.CLOUDS3D_STEPS_SUN=日光步数
+# EN: option.CLOUDS3D_ALTERNATE_SKYLIGHT=Alternate Skylight
+option.CLOUDS3D_ALTERNATE_SKYLIGHT=备用天光
+# EN: option.CLOUDS3D_ALTERNATE_SKYLIGHT.comment=More realistic but noisier way of doing skylight. Can be very noisy in some cases!
+option.CLOUDS3D_ALTERNATE_SKYLIGHT.comment=更真实但噪声更大的天光计算方式，某些情况下噪声会非常明显！
+# EN: option.CLOUDS3D_STEPS_SKY=Skylight Steps
+option.CLOUDS3D_STEPS_SKY=天光步数
+
+# EN: option.CLOUDS3D_ALTITUDE=Altitude
+option.CLOUDS3D_ALTITUDE=高度
+# EN: option.CLOUDS3D_THICKNESS_MULT=Thickness
+option.CLOUDS3D_THICKNESS_MULT=厚度
+# EN: option.CLOUDS3D_COVERAGE=Coverage
+option.CLOUDS3D_COVERAGE=云量
+# EN: option.CLOUDS3D_SCALE=Scale
+option.CLOUDS3D_SCALE=缩放
+# EN: option.CLOUDS3D_USE_WORLD_TIME=Use World Time
+option.CLOUDS3D_USE_WORLD_TIME=使用世界时间
+# EN: option.CLOUDS3D_SPEED=Speed
+option.CLOUDS3D_SPEED=速度
+
+##--## Air Fog ##-------------------------------------------------------------##
+
+# EN: option.VL_AIR=Volumetric Lighting
+option.VL_AIR=体积光
+# EN: option.VL_AIR_STEPS=VL Steps
+option.VL_AIR_STEPS=体积光步数
+# EN: option.DISTANT_VL=Distant VL
+option.DISTANT_VL=远景体积光
+# EN: option.FOG_AIR_DENSITY=Air Density Multiplier
+option.FOG_AIR_DENSITY=空气密度倍率
+# EN: option.FOG_RAIN_DENSITY=Rain Fog Density
+option.FOG_RAIN_DENSITY=雨天雾密度
+
+##--## Water Fog ##-----------------------------------------------------------##
+
+# EN: option.VL_WATER=Volumetric Lighting
+option.VL_WATER=体积光
+# EN: option.VL_WATER_STEPS=VL Steps
+option.VL_WATER_STEPS=体积光步数
+# EN: option.VL_WATER_CAUSTICS=HQ Volumetric Caustics
+option.VL_WATER_CAUSTICS=高质量体积焦散
+# EN: option.VL_WATER_CAUSTICS.comment=Allows high-quality caustics in VL. Slow!
+option.VL_WATER_CAUSTICS.comment=在体积光中启用高质量焦散。性能开销较大！
+# EN: option.UNDERWATER_ADAPTATION=Underwater Adaptation
+option.UNDERWATER_ADAPTATION=水下视觉适应
+# EN: option.WATER_REALISTIC_PHASE_FUNCTION=Realistic Phase Function
+option.WATER_REALISTIC_PHASE_FUNCTION=真实感相位函数
+# EN: option.WATER_REALISTIC_PHASE_FUNCTION.comment=Use a more realistic phase function for water. Not recommended if VL is disabled. Currently causes some artifacts!
+option.WATER_REALISTIC_PHASE_FUNCTION.comment=为水体使用更真实的相位函数。关闭体积光时不建议开启；当前仍会产生一些画面瑕疵！
+
+# EN: option.WATER_SCATTERING_R=Scattered Color R
+option.WATER_SCATTERING_R=散射色 R
+# EN: option.WATER_SCATTERING_G=Scattered Color G
+option.WATER_SCATTERING_G=散射色 G
+# EN: option.WATER_SCATTERING_B=Scattered Color B
+option.WATER_SCATTERING_B=散射色 B
+
+# EN: option.WATER_TRANSMISSION_R=Transmitted Color R
+option.WATER_TRANSMISSION_R=透射色 R
+# EN: option.WATER_TRANSMISSION_G=Transmitted Color G
+option.WATER_TRANSMISSION_G=透射色 G
+# EN: option.WATER_TRANSMISSION_B=Transmitted Color B
+option.WATER_TRANSMISSION_B=透射色 B
+
+##--## Parallax ##------------------------------------------------------------##
+
+# EN: option.PARALLAX=Parallax
+option.PARALLAX=视差
+# EN: option.PARALLAX_SHADOWS=Parallax Self-Shadows
+option.PARALLAX_SHADOWS=视差自阴影
+# EN: option.SMOOTH_PARALLAX=Smooth Parallax
+option.SMOOTH_PARALLAX=平滑视差
+# EN: option.SMART_PARALLAX=Smart Parallax
+option.SMART_PARALLAX=智能视差
+
+# EN: option.PARALLAX_DEPTH=Depth
+option.PARALLAX_DEPTH=深度
+# EN: option.PARALLAX_QUALITY=Quality
+option.PARALLAX_QUALITY=质量
+
+##--## Shadow Map ##----------------------------------------------------------##
+
+# EN: option.shadowMapResolution=Shadow Map Resolution
+option.shadowMapResolution=阴影贴图分辨率
+# EN: option.SHADOW_DISTANCE_EFFECTIVE=Effective Shadow Distance
+option.SHADOW_DISTANCE_EFFECTIVE=有效阴影距离
+# EN: option.SHADOW_INFINITE_RENDER_DISTANCE=Infinite Shadow Distance
+option.SHADOW_INFINITE_RENDER_DISTANCE=无限阴影距离
+# EN: option.shadowDistance=Shadow Distance
+option.shadowDistance=阴影距离
+
+# EN: screen.shadowMapping=Shadow Mapping
+screen.shadowMapping=阴影映射
+# EN: screen.rsm=Reflective Shadow Mapping
+screen.rsm=反射阴影映射
+
+# EN: option.SHADOW_BACKFACE_CULLING=Backface Culling
+option.SHADOW_BACKFACE_CULLING=背面剔除
+# EN: option.SHADOW_DISABLE_ALPHA_MIPMAP=Disable Alpha Mipmap
+option.SHADOW_DISABLE_ALPHA_MIPMAP=禁用 Alpha 通道 Mipmap
+
+##--## Shadow Mapping
+
+# EN: option.SHADOW_FILTER=Shadow Filter
+option.SHADOW_FILTER=阴影过滤器
+# EN: value.SHADOW_FILTER.SHADOW_FILTER_NONE=None
+value.SHADOW_FILTER.SHADOW_FILTER_NONE=无
+# EN: value.SHADOW_FILTER.SHADOW_FILTER_BILINEAR=Bilinear
+value.SHADOW_FILTER.SHADOW_FILTER_BILINEAR=双线性
+# EN: value.SHADOW_FILTER.SHADOW_FILTER_PCF=PCF
+value.SHADOW_FILTER.SHADOW_FILTER_PCF=PCF
+# EN: value.SHADOW_FILTER.SHADOW_FILTER_PCSS=PCSS
+value.SHADOW_FILTER.SHADOW_FILTER_PCSS=PCSS
+# EN: value.SHADOW_FILTER.SHADOW_FILTER_DUAL_PCSS=Dual PCSS
+value.SHADOW_FILTER.SHADOW_FILTER_DUAL_PCSS=双 PCSS
+# EN: option.SHADOW_COLORED=Colored Shadows
+option.SHADOW_COLORED=彩色阴影
+# EN: option.SHADOW_FILTER_SAMPLES=Filter Samples
+option.SHADOW_FILTER_SAMPLES=过滤采样数
+# EN: option.SHADOW_FILTER_SAMPLES.comment=For PCF, PCSS, and Dual PCSS filters.
+option.SHADOW_FILTER_SAMPLES.comment=适用于 PCF、PCSS 和双 PCSS 过滤器。
+# EN: option.SHADOW_SEARCH_SAMPLES=Blocker Search Samples
+option.SHADOW_SEARCH_SAMPLES=遮挡物搜索采样数
+# EN: option.SHADOW_SEARCH_SAMPLES.comment=For PCSS and Dual PCSS filters.
+option.SHADOW_SEARCH_SAMPLES.comment=适用于 PCSS 和双 PCSS 过滤器。
+
+##--## Reflective Shadow Mapping
+
+# EN: option.RSM=Reflective Shadow Mapping
+option.RSM=反射阴影映射
+# EN: option.RSM_SAMPLES=Samples
+option.RSM_SAMPLES=采样数
+# EN: option.RSM_BRIGHTNESS=Brightness
+option.RSM_BRIGHTNESS=亮度
+# EN: suffix.RSM_BRIGHTNESS=x
+suffix.RSM_BRIGHTNESS=×
+# EN: option.RSM_RADIUS=Radius
+option.RSM_RADIUS=半径
+
+# EN: option.RSM_LEAK_PREVENTION=Light Leak Prevention
+option.RSM_LEAK_PREVENTION=漏光抑制
+
+##--## Reflections ##---------------------------------------------------------##
+
+# EN: option.SSR_RAY_COUNT=Ray Count
+option.SSR_RAY_COUNT=射线数量
+# EN: option.SSR_RAY_STRIDE=Ray Stride
+option.SSR_RAY_STRIDE=射线步长
+# EN: option.SSR_RAY_STRIDE.comment=Roughly corresponds to the number of pixels a reflection is accurate to. Low values can be extremely intensive!
+option.SSR_RAY_STRIDE.comment=大致对应反射可精确到的像素范围；数值过低会带来极高的性能开销！
+# EN: option.SSR_TAIL_CLAMP=Tail Clamp
+option.SSR_TAIL_CLAMP=尾部钳制
+# EN: option.SSR_MULTILAYER=Multilayer SSR
+option.SSR_MULTILAYER=多层 SSR
+
+# EN: option.SSR_ALLOW_VL_AIR=Reflect Air VL
+option.SSR_ALLOW_VL_AIR=反射空气体积光
+# EN: option.SSR_ALLOW_VL_WATER=Reflect Water VL
+option.SSR_ALLOW_VL_WATER=反射水下体积光
+
+##--## Temporal Anti-Aliasing ##----------------------------------------------##
+
+# EN: option.TAA=Temporal Anti-Aliasing
+option.TAA=时间性抗锯齿
+# EN: option.TAA_SOFT=Soft TAA
+option.TAA_SOFT=柔和 TAA
+# EN: option.TAA_SOFT.comment=Anti-aliases better, but is slightly blurry.
+option.TAA_SOFT.comment=抗锯齿效果更好，但画面略微模糊。
+# EN: option.TAA_CLIP=Enable Clipping
+option.TAA_CLIP=启用裁剪
+# EN: option.TAA_CLIP.comment=Prevents a lot of ghosting. Should only be disabled for screenshots!
+option.TAA_CLIP.comment=可有效避免大量残影；仅在截图时才建议关闭！
+# EN: option.TAA_MOTION_REJECTION=Motion Rejection
+option.TAA_MOTION_REJECTION=运动拒绝
+# EN: option.TAA_MOTION_REJECTION.comment=Lower values have more blurring in motion. Higher values have more aliasing in motion.
+option.TAA_MOTION_REJECTION.comment=数值越低，运动时画面越模糊；数值越高，运动时锯齿越明显。
+
+##--## Display transform ##---------------------------------------------------##
+
+# EN: screen.display_transform=Tonemapping
+screen.display_transform=色调映射
+
+# EN: option.DISPLAY_TRANSFORM_COLORFULNESS_PERCENT=Saturation
+option.DISPLAY_TRANSFORM_COLORFULNESS_PERCENT=饱和度
+# EN: suffix.DISPLAY_TRANSFORM_COLORFULNESS_PERCENT=%
+suffix.DISPLAY_TRANSFORM_COLORFULNESS_PERCENT=%
+# EN: option.DISPLAY_TRANSFORM_CONTRAST_MODIFIER=Contrast modifier
+option.DISPLAY_TRANSFORM_CONTRAST_MODIFIER=对比度调节
+
+# EN: option.DISPLAY_TRANSFORM_BRIGHTNESS_COMPRESSION_PERCENT=Brightness compression
+option.DISPLAY_TRANSFORM_BRIGHTNESS_COMPRESSION_PERCENT=亮度压缩
+# EN: suffix.DISPLAY_TRANSFORM_BRIGHTNESS_COMPRESSION_PERCENT=%
+suffix.DISPLAY_TRANSFORM_BRIGHTNESS_COMPRESSION_PERCENT=%
+
+##--## Water Waves ##---------------------------------------------------------##
+
+# EN: option.WATER_WAVES_VERSION=Waves Version
+option.WATER_WAVES_VERSION=波浪版本
+# EN: screen.waves1 = Waves 1 settings
+screen.waves1=波浪组 1 设置
+# EN: screen.waves2 = Waves 2 settings
+screen.waves2=波浪组 2 设置
+
+# EN: option.WATER_WAVES_COUNT=Wave Count
+option.WATER_WAVES_COUNT=波浪数量
+# EN: option.WATER_WAVES_G=Gravity
+option.WATER_WAVES_G=重力
+# EN: suffix.WATER_WAVES_G=m/s²
+suffix.WATER_WAVES_G=m/s²
+# EN: option.WATER_WAVES_WAVELENGTH=Wavelength
+option.WATER_WAVES_WAVELENGTH=波长
+# EN: suffix.WATER_WAVES_WAVELENGTH=m
+suffix.WATER_WAVES_WAVELENGTH=m
+# EN: option.WATER_WAVES_WAVE_HEIGHT_RATIO=Wave Height Ratio
+option.WATER_WAVES_WAVE_HEIGHT_RATIO=波高比
+# EN: option.WATER_WAVES_WAVELENGTH_GAIN=Wavelength Gain
+option.WATER_WAVES_WAVELENGTH_GAIN=波长增益
+# EN: option.WATER_WAVES_WAVE_HEIGHT_GAIN=Wave Height Gain
+option.WATER_WAVES_WAVE_HEIGHT_GAIN=波高增益
+# EN: option.WATER_WAVES_SHARPENING=Wave Sharpening
+option.WATER_WAVES_SHARPENING=波峰锐化
+# EN: option.WATER_WAVES_SHARPENING.comment=Sharpens the crests of waves.
+option.WATER_WAVES_SHARPENING.comment=使波浪的波峰更锐利。
+
+# EN: option.WATER_PARALLAX=Water Parallax
+option.WATER_PARALLAX=水面视差
+# EN: option.WATER_PARALLAX_DEPTH_MULTIPLIER=Water Parallax Depth
+option.WATER_PARALLAX_DEPTH_MULTIPLIER=水面视差深度
+# EN: option.WATER_PARALLAX_STEPS=Water Parallax Steps
+option.WATER_PARALLAX_STEPS=水面视差步数
+
+##--## Water Caustics ##------------------------------------------------------##
+
+# EN: option.CAUSTICS=Water Caustics
+option.CAUSTICS=水焦散
+# EN: value.CAUSTICS.CAUSTICS_OFF=Off
+value.CAUSTICS.CAUSTICS_OFF=关
+# EN: value.CAUSTICS.CAUSTICS_LOW=Low
+value.CAUSTICS.CAUSTICS_LOW=低
+# EN: value.CAUSTICS.CAUSTICS_MEDIUM=Medium
+value.CAUSTICS.CAUSTICS_MEDIUM=中
+# EN: value.CAUSTICS.CAUSTICS_HIGH=High
+value.CAUSTICS.CAUSTICS_HIGH=高
+# EN: option.CAUSTICS_POWER=Contrast
+option.CAUSTICS_POWER=对比度
+# EN: option.CAUSTICS_QUALITY=Quality
+option.CAUSTICS_QUALITY=质量
+# EN: option.CAUSTICS_QUALITY.comment=Higher values allow for finer detail and (generally) less noise.
+option.CAUSTICS_QUALITY.comment=数值越高，细节越精细，噪点（通常）也越少。
+# EN: option.CAUSTICS_DITHERED=Use Dithering
+option.CAUSTICS_DITHERED=使用抖动
+# EN: option.CAUSTICS_DITHERED.comment=This should usually be left on. Does not affect low & medium settings.
+option.CAUSTICS_DITHERED.comment=通常应保持开启；对低、中画质设置无影响。
+# EN: option.CAUSTICS_HIGH_SUBSEARCH_ITERATIONS = High: Subsearch Iterations
+option.CAUSTICS_HIGH_SUBSEARCH_ITERATIONS=高画质：子搜索迭代次数
+# EN: option.CAUSTICS_HIGH_SUBSEARCH_ITERATIONS.comment = Subsearch iterations help provide significantly more precise caustics at a rather small performance cost.
+option.CAUSTICS_HIGH_SUBSEARCH_ITERATIONS.comment=子搜索迭代能以很小的性能开销，显著提升焦散的精确度。
+
+##--## Miscellaneous ##-------------------------------------------------------##
+
+# EN: option.BLOOM=Bloom
+option.BLOOM=泛光
+# EN: option.BLOOM_AMOUNT=Bloom Strength
+option.BLOOM_AMOUNT=泛光强度
+# EN: option.CONTRAST=Contrast
+option.CONTRAST=对比度
+# EN: option.SATURATION=Saturation
+option.SATURATION=饱和度
+# EN: option.LOWLIGHT_DESATURATION=Lowlight Desaturation
+option.LOWLIGHT_DESATURATION=暗部去饱和
+# EN: option.LOWLIGHT_NOISE=Lowlight Noise
+option.LOWLIGHT_NOISE=暗部噪点
+# EN: option.CONE_OVERLAP_SIMULATION=Cone Overlap Simulation
+option.CONE_OVERLAP_SIMULATION=锥细胞重叠模拟
+# EN: option.CONE_OVERLAP_SIMULATION.comment=Simulates the effect that the overlapping response of cone cells has on highlights. This significantly improves the appearance of highlights.
+option.CONE_OVERLAP_SIMULATION.comment=模拟视锥细胞对高光的重叠响应效应，可显著改善高光的观感。
+# EN: value.CONE_OVERLAP_SIMULATION.0=Off
+value.CONE_OVERLAP_SIMULATION.0=关
+# EN: option.WHITE_BALANCE=White Balance
+option.WHITE_BALANCE=白平衡
+# EN: suffix.WHITE_BALANCE=k
+suffix.WHITE_BALANCE=K
+# EN: option.HAND_FOV=Hand FOV
+option.HAND_FOV=手持物品视野
+# EN: option.LUT=Color Lookup Table
+option.LUT=颜色查找表
+# EN: option.REFRACTION_MODE=Refrections
+option.REFRACTION_MODE=折射模式
+# EN: value.REFRACTION_MODE.REFRACTION_OFF=Off
+value.REFRACTION_MODE.REFRACTION_OFF=关
+# EN: value.REFRACTION_MODE.REFRACTION_WATER_ONLY=On Water
+value.REFRACTION_MODE.REFRACTION_WATER_ONLY=仅水面
+# EN: value.REFRACTION_MODE.REFRACTION_ON=On
+value.REFRACTION_MODE.REFRACTION_ON=开
+# EN: option.RESOURCE_FORMAT=Resource Pack Format
+option.RESOURCE_FORMAT=资源包格式
+# EN: value.RESOURCE_FORMAT.RESOURCE_FORMAT_GREYSCALE=Greyscale
+value.RESOURCE_FORMAT.RESOURCE_FORMAT_GREYSCALE=灰度
+# EN: value.RESOURCE_FORMAT.RESOURCE_FORMAT_OPBR=Old "PBR"
+value.RESOURCE_FORMAT.RESOURCE_FORMAT_OPBR=旧版 PBR
+# EN: value.RESOURCE_FORMAT.RESOURCE_FORMAT_CONTINUUM2=Continuum 2.0
+value.RESOURCE_FORMAT.RESOURCE_FORMAT_CONTINUUM2=Continuum 2.0
+# EN: value.RESOURCE_FORMAT.RESOURCE_FORMAT_LAB_1_1=LAB v1.1
+value.RESOURCE_FORMAT.RESOURCE_FORMAT_LAB_1_1=LAB v1.1
+# EN: value.RESOURCE_FORMAT.RESOURCE_FORMAT_LAB_1_2=LAB v1.2
+value.RESOURCE_FORMAT.RESOURCE_FORMAT_LAB_1_2=LAB v1.2
+# EN: value.RESOURCE_FORMAT.RESOURCE_FORMAT_LAB_1_3=LAB v1.3
+value.RESOURCE_FORMAT.RESOURCE_FORMAT_LAB_1_3=LAB v1.3
+# EN: option.SSCS=Contact Shadows
+option.SSCS=接触阴影
+# EN: option.sunPathRotation=Sun Angle
+option.sunPathRotation=太阳角度
+# EN: suffix.sunPathRotation=°
+suffix.sunPathRotation=°
+# EN: option.TIME_SCALE=Time Scale
+option.TIME_SCALE=时间倍率
+# EN: suffix.TIME_SCALE=x
+suffix.TIME_SCALE=×
+# EN: option.TOTAL_INTERNAL_REFLECTION=Total Internal Reflection
+option.TOTAL_INTERNAL_REFLECTION=全内反射
+
+# EN: screen.unassigned=Unsupported options
+screen.unassigned=不受支持的选项
+# EN: screen.unassigned.comment=These options are unsupported and may be broken if changed from their defaults.
+screen.unassigned.comment=这些选项不受支持，若更改默认值可能导致画面异常。
+
+##--## Additions 补充键（上游 en_US.lang 缺失）##-------------------##
+
+# 以下条目已被 shaders.properties 的设置界面引用（或在代码中以可切换开关形式存在），
+# 但 en_US.lang 中尚不存在对应条目。此处补齐中文；建议英文名已随注释给出，
+# 便于日后回填到 en_US.lang。
+
+# 杂项页 misc
+
+##--## Miscellaneous 杂项补充
+
+##--## Shadow Mapping 阴影映射补充
+
+# EN(建议): option.SHADOW_PENUMBRA_SHARPENING = Shadow Penumbra Sharpening
+option.SHADOW_PENUMBRA_SHARPENING=阴影半影锐化
+
+##--## Temporal Anti-Aliasing 时间性抗锯齿补充
+
+# EN(建议): option.TAA_FILTER_CURRENT = Current-Frame Filter
+option.TAA_FILTER_CURRENT=当前帧过滤器
+# EN(建议): option.TAA_FILTER_HISTORY = History-Frame Filter
+option.TAA_FILTER_HISTORY=历史帧过滤器
+# EN(建议): option.TAA_OFFCENTER_REJECTION = Off-Center Rejection
+option.TAA_OFFCENTER_REJECTION=离中心拒绝
+
+##--## Water Waves 1 波浪组 1 补充
+
+# EN(建议): option.WATER_WAVES1_COUNT = Wave Count
+option.WATER_WAVES1_COUNT=波浪数量
+# EN(建议): option.WATER_WAVES1_G = Gravity
+option.WATER_WAVES1_G=重力
+# EN(建议): option.WATER_WAVES1_WAVELENGTH = Wavelength
+option.WATER_WAVES1_WAVELENGTH=波长
+# EN(建议): option.WATER_WAVES1_HEIGHT_RATIO = Wave Height Ratio
+option.WATER_WAVES1_HEIGHT_RATIO=波高比
+# EN(建议): option.WATER_WAVES1_WAVELENGTH_GAIN = Wavelength Gain
+option.WATER_WAVES1_WAVELENGTH_GAIN=波长增益
+# EN(建议): option.WATER_WAVES1_HEIGHT_GAIN = Wave Height Gain
+option.WATER_WAVES1_HEIGHT_GAIN=波高增益
+# EN(建议): option.WATER_WAVES1_SHARPENING = Wave Sharpening
+option.WATER_WAVES1_SHARPENING=波峰锐化
+
+##--## Water Waves 2 波浪组 2 补充
+
+# EN(建议): option.WATER_WAVES2_COUNT = Wave Count
+option.WATER_WAVES2_COUNT=波浪数量
+# EN(建议): option.WATER_WAVES2_G = Gravity
+option.WATER_WAVES2_G=重力
+# EN(建议): option.WATER_WAVES2_WAVELENGTH = Wavelength
+option.WATER_WAVES2_WAVELENGTH=波长
+# EN(建议): option.WATER_WAVES2_HEIGHT_RATIO = Wave Height Ratio
+option.WATER_WAVES2_HEIGHT_RATIO=波高比
+# EN(建议): option.WATER_WAVES2_WAVELENGTH_GAIN = Wavelength Gain
+option.WATER_WAVES2_WAVELENGTH_GAIN=波长增益
+# EN(建议): option.WATER_WAVES2_HEIGHT_GAIN = Wave Height Gain
+option.WATER_WAVES2_HEIGHT_GAIN=波高增益
+
+##--## 代码内其它可切换开关（可能出现在“不受支持的选项”页）
+
+# EN(建议): option.BLACK_TERRAIN = Black Terrain
+option.BLACK_TERRAIN=黑色地形
+# EN(建议): option.LIGHTING_ONLY = Lighting Only
+option.LIGHTING_ONLY=仅光照
+# EN(建议): option.GLOBAL_LIGHT_FADE_WITH_SKYLIGHT = Global Light Fade With Skylight
+option.GLOBAL_LIGHT_FADE_WITH_SKYLIGHT=全局光随天光淡出
+# EN(建议): option.BEACON_BEAM_SHADOWS = Beacon Beam Shadows
+option.BEACON_BEAM_SHADOWS=信标光束阴影
+# EN(建议): option.DIFFRACTION_SPIKES = Diffraction Spikes
+option.DIFFRACTION_SPIKES=衍射星芒
+# EN(建议): option.REFRACTION_RAYTRACED = Ray-Traced Refraction
+option.REFRACTION_RAYTRACED=光追折射
+# EN(建议): option.CAUSTICS_DISPERSION = Caustic Dispersion
+option.CAUSTICS_DISPERSION=焦散色散
+# EN(建议): option.SMOOTH_ALBEDO = Smooth Albedo
+option.SMOOTH_ALBEDO=平滑反照率
+# EN(建议): option.SMOOTH_NORMALS = Smooth Normals
+option.SMOOTH_NORMALS=平滑法线
+# EN(建议): option.SMOOTH_SPECULAR = Smooth Specular
+option.SMOOTH_SPECULAR=平滑高光
+
+##--## 枚举取值补充
+
+# EN(建议): value.TAA_FILTER_CURRENT.FILTER_NEAREST = Nearest
+value.TAA_FILTER_CURRENT.FILTER_NEAREST=最近邻
+# EN(建议): value.TAA_FILTER_CURRENT.FILTER_BILINEAR = Bilinear
+value.TAA_FILTER_CURRENT.FILTER_BILINEAR=双线性
+# EN(建议): value.TAA_FILTER_CURRENT.FILTER_BICUBIC = Bicubic
+value.TAA_FILTER_CURRENT.FILTER_BICUBIC=双三次
+# EN(建议): value.TAA_FILTER_HISTORY.FILTER_BILINEAR = Bilinear
+value.TAA_FILTER_HISTORY.FILTER_BILINEAR=双线性
+# EN(建议): value.TAA_FILTER_HISTORY.FILTER_BICUBIC = Bicubic
+value.TAA_FILTER_HISTORY.FILTER_BICUBIC=双三次

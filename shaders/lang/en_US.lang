@@ -6,6 +6,7 @@ screen.clouds2d=2D Clouds
 screen.clouds3d=3D Clouds
 screen.fogAir=Air Fog
 screen.fogWater=Water Fog
+screen.lighting=Lighting
 screen.parallax=Parallax
 screen.shadowMap=Shadow Map
 screen.ssr=Screen-Space Reflections
@@ -16,9 +17,16 @@ screen.waterCaustics=Water Caustics
 screen.misc=Miscellaneous
 screen.misc.comment=Various options that didn't fit anywhere else.
 
+##--## Lighting ##-----------------------------------------------------------##
+
+option.BLOCK_LIGHT_LUMINANCE=Block Light Luminance
+option.BLOCK_LIGHT_SIZE=Block Light Size
+option.BLOCK_LIGHT_TEMPERATURE=Block Light Temperature
+option.BLOCK_LIGHT_DIRECTIONAL=Directional Block Light
+option.BLOCK_LIGHT_USE_AO=Use AO on blocklight
+
 ##--## Ambient Occlusion ##---------------------------------------------------##
 
-option.BLOCK_LIGHT_USE_AO=Use AO on blocklight
 option.GLOBAL_LIGHT_USE_AO=Use AO on sunlight
 
 option.HBAO=Horizon-Based AO
